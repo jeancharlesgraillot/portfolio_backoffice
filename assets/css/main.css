@@ -11,9 +11,9 @@
    ========================================================================== */
 
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
 }
 
 /*
@@ -25,13 +25,13 @@ html {
  */
 
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 /*
@@ -39,12 +39,12 @@ html {
  */
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
 /*
@@ -59,7 +59,7 @@ iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 /*
@@ -67,9 +67,9 @@ video {
  */
 
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /*
@@ -77,7 +77,7 @@ fieldset {
  */
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 /* ==========================================================================
@@ -85,10 +85,10 @@ textarea {
    ========================================================================== */
 
 .browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
 
 /* ==========================================================================
@@ -108,25 +108,19 @@ textarea {
 /* ############################   TABLETS   ############################ */
 /* ##################################################################### */
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-
-}
+@media (min-width: 768px) {}
 
 /* ##################################################################### */
 /* ############################   DESKTOPS   ########################### */
 /* ##################################################################### */
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-
-}
+@media (min-width: 992px) {}
 
 /* ##################################################################### */
 /* ########################   LARGE DESKTOPS   ######################### */
 /* ##################################################################### */
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-
-}
+@media (min-width: 1200px) {}
 
 
 
@@ -148,7 +142,7 @@ textarea {
  */
 
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
 /*
@@ -157,14 +151,14 @@ textarea {
  */
 
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 /*
@@ -175,12 +169,12 @@ textarea {
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
 }
 
 /*
@@ -188,7 +182,7 @@ textarea {
  */
 
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 /*
@@ -205,12 +199,14 @@ textarea {
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 /* ==========================================================================
@@ -220,14 +216,14 @@ textarea {
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+  /* Style adjustments for viewports that meet the condition */
 }
 
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
 }
 
 /* ==========================================================================
@@ -237,74 +233,497 @@ textarea {
    ========================================================================== */
 
 @media print {
-    *,
-    *:before,
-    *:after,
-    *:first-letter,
-    *:first-line {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+
+  *,
+  *:before,
+  *:after,
+  *:first-letter,
+  *:first-line {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
+  a[href]:after {
+    content: " ("attr(href) ")";
+  }
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
+  abbr[title]:after {
+    content: " ("attr(title) ")";
+  }
 
-    /*
+  /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
 
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
 
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
 
-    /*
+  /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
 
-    thead {
-        display: table-header-group;
-    }
+  thead {
+    display: table-header-group;
+  }
 
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
 
-    img {
-        max-width: 100% !important;
-    }
+  img {
+    max-width: 100% !important;
+  }
 
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
 
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }
+
+/* ==========================================================================
+   Start
+   ========================================================================== */
+
+/* Style général*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f3f3f3;
+}
+
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+section hr {
+  background: #ff4800;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr {
+  width: 5rem;
+  height: .3125rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/**********************************Header***********************************/
+
+.navbar-responsive {
+  background-color: #282828;
+}
+
+.navbar-responsive ul {
+  text-align: center;
+}
+
+.navbar-responsive ul li {
+  height: 4rem;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 4rem;
+  color: #fff;
+}
+
+.navbar-responsive ul li a {
+  color: inherit;
+}
+
+
+header {
+  width: 100%;
+  height: 40.625rem;
+  padding-top: 3.125rem;
+  background-image: url('../img/site/header.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/***************************logonavbar***************************************/
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.875rem;
+  color: #fff;
+}
+
+.logo h1 span {
+  font-weight: 400;
+}
+
+.logo hr {
+  background: #fff;
+  margin: 0;
+}
+
+.logo h2 {
+  font-size: .875rem;
+  font-weight: 300;
+  line-height: .875rem;
+  color: #fff;
+  opacity: .5;
+  margin-top: 1.875rem;
+}
+
+.navbar ul {
+  float: right;
+}
+
+.navbar ul li {
+  float: left;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 2.5rem;
+  color: #fff;
+}
+
+.navbar ul li+li {
+  margin-left: 3rem;
+}
+
+.navbar ul li a {
+  color: inherit;
+}
+
+
+.navbar img.menu {
+  width: 2.5rem;
+}
+
+h1.catchphrase {
+  font-size: 2.125rem;
+  font-weight: 300;
+  line-height: 3.125rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 7rem;
+}
+
+a.down-arrow {
+  display: block;
+  width: 4.125rem;
+  margin: auto;
+}
+
+a.down-arrow img {
+  margin-top: 1.875rem;
+  width: 100%;
+  animation: arrow 1s ease-in-out infinite alternate;
+}
+
+
+@keyframes arrow {
+  from {
+    opacity: 1;
+    margin-top: 4rem;
+  }
+
+  to {
+    opacity: .2;
+    margin-top: 6rem;
+  }
+}
+
+
+/*************************Mes réalisations***********************************/
+
+.work {
+  background-color: #dadada;
+}
+
+.work h2,
+.work p {
+  text-align: center;
+  color: #282828;
+}
+
+.work h2 {
+  font-size: 2.1875rem;
+  font-weight: 800;
+  line-height: 2.1875rem;
+  color: #282828;
+}
+
+.work p {
+  margin-bottom: 5.25rem;
+  text-align: center;
+  font-size: 1.5625rem;
+  font-weight: 400;
+  line-height: 1.5625rem;
+}
+
+.work img {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  max-width: 350px;
+}
+
+
+.works-details,
+.works-details p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
+.works-details h4 {
+  margin-bottom: 2rem;
+}
+
+.works-details p {
+  font-size: 1.3rem;
+}
+
+.works-details a {
+  border: 2px solid #a8002e;
+  border-radius: 3px;
+  padding: 5px 10px;
+  color: #282828;
+}
+
+@media (min-width: 768px) {
+
+  .works-details,
+  .works-details p {
+    text-align: left;
+  }
+}
+
+.works-details h4 {
+  font-style: italic;
+  font-weight: 600;
+}
+
+
+.works-separator {
+  width: 50%;
+  height: 1px;
+  background: #2c2c2c;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/*******************Scolarité / Formations***********************************/
+
+
+.school h2 {
+  font-size: 2.1875rem;
+  font-weight: 800;
+  line-height: 2.1875rem;
+  color: #282828;
+  text-align: center;
+}
+
+.school-part {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.three-points {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+.three-points i {
+  color: #ff4800;
+  margin-bottom: .5rem;
+}
+
+
+/******************A propos****************************/
+
+.about h2 {
+  font-size: 2.1875rem;
+  font-weight: 800;
+  line-height: 2.1875rem;
+  color: #282828;
+  text-align: center;
+}
+
+.about h3 {
+  margin-bottom: 2rem;
+  font-size: 1.5625rem;
+  font-weight: 600;
+  line-height: 1.5625rem;
+  color: #282828;
+}
+
+.about p {
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.875rem;
+  color: #282828;
+}
+
+.about ul {
+  list-style: url('../img/site/puce.svg');
+  margin-bottom: 2rem;
+  list-style-position: inside;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.875rem;
+  color: #282828;
+}
+
+.about ul a {
+  color: #ff4800;
+  text-decoration: underline;
+}
+
+.about img.picture {
+  float: right;
+}
+
+.social-networks {
+  text-align: center;
+}
+
+.social-networks a+a {
+  margin-left: .3125rem;
+}
+
+.social-networks a img {
+  width: 2.1875rem;
+}
+
+
+/************************Contact****************************/
+
+.contact {
+  background-color: #dadada;
+}
+
+.contact h2 {
+  font-size: 2.1875rem;
+  font-weight: 800;
+  line-height: 2.1875rem;
+  color: #282828;
+  text-align: center;
+}
+
+.contactForm {
+  /* Uniquement centrer le formulaire sur la page */
+  margin: 0 auto;
+  width: 100%;
+  /* Encadré pour voir les limites du formulaire */
+  padding: 2em;
+  border: 1px solid #a8002e;
+  border-radius: 1em;
+}
+
+.contactForm div {
+  margin-bottom: 15px;
+}
+
+.contactForm div input,
+.contactForm div textarea {
+  width: 75%;
+}
+
+label {
+  /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+.last-input {
+  margin-bottom: 30px;
+}
+
+button {
+  border: 2px solid #a8002e;
+  border-radius: 3px;
+  line-height: 1.5rem;
+}
+
+/************************Footer*****************************/
+
+
+
+footer p {
+  margin-top: 4.375rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  list-style-position: inside;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  color: #666;
+}
+
+footer ul {
+  margin-bottom: 4.375rem;
+  text-align: center;
+}
+
+footer ul li {
+  display: inline;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  color: #282828;
+}
+
+footer ul li a {
+  color: inherit;
+}
+
+/**********************Correction affichage mobile***************************/
