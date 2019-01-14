@@ -35,12 +35,16 @@ if (!empty($_POST['admin_name'])
         if ($isPasswordCorrect) 
         {
             
-                $_SESSION['admin_name'] = $admin_name;
+            $_SESSION['admin_name'] = $admin_name;
 
-                header('Location: adminBack.php');
-            
+            header('Location: adminBack.php');
+
         }else{
+
             $message = 'Mauvais nom ou mot de passe !';
+            
+            // header('Location: index.php');
+            header('Refresh: 1; url=index.php');
             
         }
 }

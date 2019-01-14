@@ -21,6 +21,10 @@ $db = Database::DB();
 // We instance an object $formManager with our PDO object
 $formManager = new FormManager($db);
 
+if (!isset($_SESSION['admin_name'])) {
+
+    header('Location: index.php');
+}
 
 // Delete account
 if (isset($_POST['id']) && isset($_POST['delete']))
