@@ -389,6 +389,10 @@ header {
   justify-content: flex-end;
 }
 
+a.hvr-underline-from-left{
+  background: 22e7e7;
+}
+
 .logo h1 {
   font-size: 1.875rem;
   font-weight: 700;

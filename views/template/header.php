@@ -16,6 +16,8 @@
   <link rel="icon" href="../favicon.png" type="image/x-icon"/>
 
   <link rel="stylesheet" href="../assets/css/normalize.css">
+  <link rel="stylesheet" href="../assets/css/aos.css" />
+  <link rel="stylesheet" href="../assets/css/hover-min.css">
   <link rel="stylesheet" href="../assets/css/main.css">
 
 </head>

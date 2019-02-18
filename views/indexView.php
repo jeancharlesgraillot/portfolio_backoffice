@@ -25,10 +25,10 @@
       <div class="navbar col-3 col-lg-8">
         <nav class="d-none d-lg-block">
           <ul>
-            <li><a class="scroll" href="#work">Réalisations</a></li>
-            <li><a class="scroll" href="#school">Scolarité / Formations</a></li>
-            <li><a class="scroll" href="#about">A propos</a></li>
-            <li><a class="scroll" href="#contact">Contact</a></li>
+            <li><a class="scroll hvr-underline-from-left" href="#work">Réalisations</a></li>
+            <li><a class="scroll hvr-underline-from-left" href="#school">Scolarité / Formations</a></li>
+            <li><a class="scroll hvr-underline-from-left" href="#about">A propos</a></li>
+            <li><a class="scroll hvr-underline-from-left" href="#contact">Contact</a></li>
           </ul>
         </nav>
         <nav class="d-lg-none">
@@ -56,7 +56,7 @@
     <hr>
     <p>Une sélection de quelques créations</p>
 
-      <div class="works-content col-12 col-md-12 row mx-auto">
+      <div data-aos="zoom-in" class="works-content col-12 col-md-12 row mx-auto">
         <div class="works-img col-12 col-md-6">
             <img class="img-thumbnail" src="../assets/img/realisation/work1xs.jpg" alt="work1xs.jpg">
         </div>
@@ -69,7 +69,7 @@
 
     <hr class="works-separator">
 
-      <div class="works-content col-12 col-md-12 row mx-auto">
+      <div data-aos="zoom-in" class="works-content col-12 col-md-12 row mx-auto">
         <div class="works-img col-12 col-md-6">
             <img class="img-thumbnail" src="../assets/img/realisation/work2xs.jpg" alt="work2xs.jpg">
         </div>
@@ -82,7 +82,7 @@
 
     <hr class="works-separator">
 
-      <div class="works-content col-12 col-md-12 row mx-auto">
+      <div data-aos="zoom-in" class="works-content col-12 col-md-12 row mx-auto">
         <div class="works-img col-12 col-md-6">
             <img class="img-thumbnail" src="../assets/img/realisation/work3xs.jpg" alt="work3xs.jpg">
         </div>
@@ -97,7 +97,7 @@
 
       <!-- d-flex flex-column flex-md-row*-->
 
-      <div class="works-content col-12 col-md-12 row mx-auto">
+      <div data-aos="zoom-in" class="works-content col-12 col-md-12 row mx-auto">
         <div class="works-img col-12 col-md-6">
             <img class="img-thumbnail" src="../assets/img/realisation/work4xs.jpg" alt="work4xs.jpg">
         </div>
@@ -110,7 +110,7 @@
 
     <hr class="works-separator">
 
-      <div class="works-content col-12 col-md-12 row mx-auto">
+      <div data-aos="zoom-in" class="works-content col-12 col-md-12 row mx-auto">
         <div class="works-img col-12 col-md-6">
             <img class="img-thumbnail" src="../assets/img/realisation/work5xs.jpg" alt="work5xs.jpg">
         </div>
@@ -123,7 +123,7 @@
 
     <hr class="works-separator">
 
-      <div class="works-content col-12 col-md-12 row mx-auto">
+      <div data-aos="zoom-in" class="works-content col-12 col-md-12 row mx-auto">
         <div class="works-img col-12 col-md-6">
             <img class="img-thumbnail" src="../assets/img/realisation/work8xs.jpg" alt="work8xs.jpg">
         </div>
