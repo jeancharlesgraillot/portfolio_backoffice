@@ -481,6 +481,17 @@ a.down-arrow img {
 
 /*************************Mes réalisations***********************************/
 
+#select{
+  border: 2px solid #a8002e;
+  border-radius: 3px;
+  padding: 5px 10px;
+  color: #282828;
+}
+
+.form-group{
+  margin-bottom: 5rem;
+}
+
 .work {
   background-color: #dadada;
 }

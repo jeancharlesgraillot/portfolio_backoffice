@@ -81,12 +81,18 @@ if (isset($_POST['submit']))
 
 
 // Delete contact
-if (isset($_POST['id']) && isset($_POST['delete']))
+if (isset($_POST['idContact']) && isset($_POST['deleteContact']))
 {
-    $delete = intval($_POST['id']);        
+    $delete = intval($_POST['idContact']);        
     $formManager->deleteUser($delete);
 }
 
+//Delete project
+if (isset($_POST['idProject']) && isset($_POST['deleteProject']))
+{
+    $delete = intval($_POST['idProject']);        
+    $projectManager->deleteProject($delete);
+}
 
 // Get data in Db
 $users = $formManager->getUsers();

@@ -57,15 +57,16 @@
     <p>Une sélection de quelques créations</p>
 
 <div id="projectsSort">
-    <form id="formtest" class="getProjectsByCategory text-center mb-5">
-      <select class="" name="category" required onchange='rewrite(this.value)'>
-        <option value="" disabled selected>Choisissez le type de projet</option>
-        <option value="Development">Développement</option>
-        <option value="Design">Design</option>
-      </select>
-      <input class="search form-control col-12 d-none" id="searchbar" placeholder="Rechercher"/>
-    </form>
-   
+
+    <div class="form-group">
+     <select id="select" class="form-control w-50 mx-auto" name="category" required onchange='rewrite(this.value)'>
+          <option value="" disabled selected>Choisissez le type de projet</option>
+          <option value="Development">Développement</option>
+          <option value="Design">Design</option>
+     </select>
+     <input class="search form-control col-12 d-none" id="searchbar" placeholder="Rechercher"/>
+    </div>
+    
    <div class="list">
     <?php 
     foreach ($projects as $project) 
@@ -78,14 +79,13 @@
         </div>
         <div class="works-details col-12 col-md-6">
           <h4><?php echo $project->getTitle(); ?></h4>
-          <p class="sortCategory"><?= $project->getCategory() ?></p>
+          <p class="d-none sortCategory"><?= $project->getCategory() ?></p>
           <p><?php echo $project->getDescription(); ?></p>
           <div><a href="<?php echo $project->getLink(); ?>">Aller sur le site</a></div>
         </div>
+        <hr class="works-separator">
     </div>
 
-    <hr class="works-separator">
-    
     <?php
     }
     ?>
@@ -211,7 +211,7 @@
 
         <p>* Ces champs sont obligatoires</p>
 
-        <form class="contactForm text-center" action="index.php" method="post">
+        <form class="contactForm text-center" action="index.php#contact" method="post">
           <div>
               <label for="name">Nom *</label>
               <input required type="text" id="name" name="user_name">

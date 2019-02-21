@@ -39,6 +39,29 @@ class ProjectManager{
     }
 
         /**
+     * Get project by id
+     *
+     * @param $id
+     * @return instance of new Project object
+     */ 
+    public function getProjectById($id)
+    {
+        $user;
+        $query = $this->getDb()->prepare('SELECT * FROM projects WHERE id = :id');
+        $query->bindValue('id', $id, PDO::PARAM_INT);
+        $query->execute();
+        
+
+        // $dataCharacter is an associative array which contains informations of a user
+        $dataProject = $query->fetch(PDO::FETCH_ASSOC);
+
+        // We create a new User object with the associative array $dataCharacter and we return it
+        $project = new Project($dataProject);
+        return $project;
+        
+    }
+
+        /**
      * Get all projects of _db
      *
      * @return  array

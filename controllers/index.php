@@ -53,10 +53,7 @@ if (isset($_POST['contact']))
         $formManager->addUser($user);
 
         $message = "Votre message a bien été envoyé !";
-
-        header('location: http://localhost/portfolio_backoffice/controllers/index.php#contact');
-        
-        
+ 
     }
     else
     {
@@ -67,15 +64,7 @@ if (isset($_POST['contact']))
 
 
 $users = $formManager->getUsers();
-if (!isset($_POST['category'])) {
-    $projects = $projectManager->getProjects();
-} elseif (isset($_POST['category']) and $_POST['category'] == 'Development'){
-    $projects = $projectManager->getProjectsByCategory('Development');
-} elseif (isset($_POST['category']) and $_POST['category'] == 'Design'){
-    $projects = $projectManager->getProjectsByCategory('Design');
-} else {
-    $projects = $projectManager->getProjects();
-}
+$projects = $projectManager->getProjects();
 
 
 
