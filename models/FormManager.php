@@ -48,7 +48,7 @@ class FormManager{
         // Array declaration
         $arrayOfUsers = [];
 
-        $query = $this->getDB()->prepare('SELECT * FROM users');
+        $query = $this->getDb()->prepare('SELECT * FROM users');
         $query->execute();
         $dataUsers = $query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -68,10 +68,10 @@ class FormManager{
      * @param $id
      * @return instance of new User object
      */ 
-    public function getUser($id)
+    public function getUserById($id)
     {
         $user;
-        $query = $this->getDB()->prepare('SELECT * FROM users WHERE id = :id');
+        $query = $this->getDb()->prepare('SELECT * FROM users WHERE id = :id');
         $query->bindValue('id', $id, PDO::PARAM_INT);
         $query->execute();
         
@@ -91,10 +91,10 @@ class FormManager{
      * @param $id
      * @return instance of new Admin object
      */ 
-    public function getAdmin($id)
+    public function getAdminById($id)
     {
         $admin;
-        $query = $this->getDB()->prepare('SELECT * FROM administrators WHERE id = :id');
+        $query = $this->getDb()->prepare('SELECT * FROM administrators WHERE id = :id');
         $query->bindValue('id', $id, PDO::PARAM_INT);
         $query->execute();
         

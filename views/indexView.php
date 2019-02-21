@@ -56,85 +56,37 @@
     <hr>
     <p>Une sélection de quelques créations</p>
 
-      <div data-aos="zoom-in" class="works-content col-12 col-md-12 row mx-auto">
+    <form class="getProjectsByCategory text-center mb-5" action="index.php" method="post">
+      <select class="" name="category" required>
+        <option value="" disabled>Choisissez le type de projet</option>
+        <option value="Development">Développement</option>
+        <option value="Design">Design</option>
+      </select>
+      <input type="submit" name="display" value="Afficher les projets par type">
+    </form>
+
+   
+    <?php 
+    foreach ($projects as $project) 
+    {
+    ?>
+
+    <div data-aos="zoom-in" class="works-content col-12 col-md-12 row mx-auto">
         <div class="works-img col-12 col-md-6">
-            <img class="img-thumbnail" src="../assets/img/realisation/work1xs.jpg" alt="work1xs.jpg">
+            <img class="img-thumbnail" src="<?php echo $project->getImage(); ?>" alt="<?php echo $project->getAlt(); ?>">
         </div>
         <div class="works-details col-12 col-md-6">
-          <h4>Illustration</h4>
-          <p>Une illustration de ferme sur Adobe Illustrator</p>
-          <div><a href="https://www.behance.net/gallery/47301585/Illustrations">Lien Behance</a></div>
+          <h4><?php echo $project->getTitle(); ?></h4>
+          <p><?php echo $project->getDescription(); ?></p>
+          <div><a href="<?php echo $project->getLink(); ?>">Aller sur le site</a></div>
         </div>
       </div>
 
     <hr class="works-separator">
-
-      <div data-aos="zoom-in" class="works-content col-12 col-md-12 row mx-auto">
-        <div class="works-img col-12 col-md-6">
-            <img class="img-thumbnail" src="../assets/img/realisation/work2xs.jpg" alt="work2xs.jpg">
-        </div>
-        <div class="works-details col-12 col-md-6">
-          <h4>Affiche</h4>
-          <p>Une affiche réalisée sous Adobe In Design</p>
-          <div><a href="https://www.behance.net/gallery/53206023/Affiches">Lien Behance</a></div>
-        </div>
-      </div>
-
-    <hr class="works-separator">
-
-      <div data-aos="zoom-in" class="works-content col-12 col-md-12 row mx-auto">
-        <div class="works-img col-12 col-md-6">
-            <img class="img-thumbnail" src="../assets/img/realisation/work3xs.jpg" alt="work3xs.jpg">
-        </div>
-        <div class="works-details col-12 col-md-6">
-          <h4>Retouche</h4>
-          <p>Une retouche photo réalisée sur Adobe Photoshop</p>
-          <div><a href="https://www.behance.net/gallery/51707863/Retouche-photo">Lien Behance</a></div>
-        </div>
-      </div>
-
-    <hr class="works-separator">
-
-      <!-- d-flex flex-column flex-md-row*-->
-
-      <div data-aos="zoom-in" class="works-content col-12 col-md-12 row mx-auto">
-        <div class="works-img col-12 col-md-6">
-            <img class="img-thumbnail" src="../assets/img/realisation/work4xs.jpg" alt="work4xs.jpg">
-        </div>
-        <div class="works-details col-12 col-md-6">
-          <h4>Site publié</h4>
-          <p>Un site réalisé sous Wordpress avec le thème Avada pour le compte d'un gîte</p>
-          <div><a href="https://www.behance.net/gallery/51739739/Sites-publis">Lien Behance</a></div>
-        </div>
-      </div>
-
-    <hr class="works-separator">
-
-      <div data-aos="zoom-in" class="works-content col-12 col-md-12 row mx-auto">
-        <div class="works-img col-12 col-md-6">
-            <img class="img-thumbnail" src="../assets/img/realisation/work5xs.jpg" alt="work5xs.jpg">
-        </div>
-        <div class="works-details col-12 col-md-6">
-          <h4>Maquette</h4>
-          <p>Une maquette de site réalisée sur Photoshop</p>
-          <div><a href="https://www.behance.net/gallery/47296363/Maquettes-web">Lien Behance</a></div>
-        </div>
-      </div>
-
-    <hr class="works-separator">
-
-      <div data-aos="zoom-in" class="works-content col-12 col-md-12 row mx-auto">
-        <div class="works-img col-12 col-md-6">
-            <img class="img-thumbnail" src="../assets/img/realisation/work8xs.jpg" alt="work8xs.jpg">
-        </div>
-        <div class="works-details col-12 col-md-6">
-          <h4>Logo</h4>
-          <p>Un logo réalisé sous Adobe Illustrator</p>
-          <div><a href="https://www.behance.net/gallery/53192425/Logos">Lien Behance</a></div>
-        </div>
-      </div>
-
-    <hr class="works-separator">
+    
+    <?php
+    }
+    ?>
 
       <div class="lienGithub works-details col-12 row mx-auto">
         <a class="mx-auto" href="https://github.com/jeancharlesgraillot?tab=repositories">Lien vers mes travaux sur github</a>
