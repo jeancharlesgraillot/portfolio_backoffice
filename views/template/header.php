@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="../assets/css/aos.css" />
   <link rel="stylesheet" href="../assets/css/hover-min.css">
   <link rel="stylesheet" href="../assets/css/main.css">
+  <script src="../assets/js/listjs.js"></script>
 
 </head>
 

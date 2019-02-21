@@ -56,16 +56,17 @@
     <hr>
     <p>Une sélection de quelques créations</p>
 
-    <form class="getProjectsByCategory text-center mb-5" action="index.php" method="post">
-      <select class="" name="category" required>
-        <option value="" disabled>Choisissez le type de projet</option>
+<div id="projectsSort">
+    <form id="formtest" class="getProjectsByCategory text-center mb-5">
+      <select class="" name="category" required onchange='rewrite(this.value)'>
+        <option value="" disabled selected>Choisissez le type de projet</option>
         <option value="Development">Développement</option>
         <option value="Design">Design</option>
       </select>
-      <input type="submit" name="display" value="Afficher les projets par type">
+      <input class="search form-control col-12 d-none" id="searchbar" placeholder="Rechercher"/>
     </form>
-
    
+   <div class="list">
     <?php 
     foreach ($projects as $project) 
     {
@@ -77,16 +78,20 @@
         </div>
         <div class="works-details col-12 col-md-6">
           <h4><?php echo $project->getTitle(); ?></h4>
+          <p class="sortCategory"><?= $project->getCategory() ?></p>
           <p><?php echo $project->getDescription(); ?></p>
           <div><a href="<?php echo $project->getLink(); ?>">Aller sur le site</a></div>
         </div>
-      </div>
+    </div>
 
     <hr class="works-separator">
     
     <?php
     }
     ?>
+
+    </div>
+</div>
 
       <div class="lienGithub works-details col-12 row mx-auto">
         <a class="mx-auto" href="https://github.com/jeancharlesgraillot?tab=repositories">Lien vers mes travaux sur github</a>
@@ -254,4 +259,23 @@
 
 
 
+<script>
+    function rewrite(sort) {
+      let test = sort.slice();
+      let inputSearch = document.getElementById('searchbar');
+      inputSearch.value = '';
+      for (let index = 0; index < test.length; index++) {
+        inputSearch.value = inputSearch.value + test[index]; 
+      }
+      inputSearch.select();
+      inputSearch.dispatchEvent(new KeyboardEvent('keyup', {'key':'y'}));
+      // window.event.keyCode = 37;
+    }
+</script>
+<script>
+var options = {
+  valueNames: [ 'sortCategory' ]
+};
 
+var userList = new List('projectsSort', options);
+</script>
