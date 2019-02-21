@@ -67,7 +67,15 @@ if (isset($_POST['contact']))
 
 
 $users = $formManager->getUsers();
-$projects = $projectManager->getProjects();
+if (!isset($_POST['category'])) {
+    $projects = $projectManager->getProjects();
+} elseif (isset($_POST['category']) and $_POST['category'] == 'Development'){
+    $projects = $projectManager->getProjectsByCategory('Development');
+} elseif (isset($_POST['category']) and $_POST['category'] == 'Design'){
+    $projects = $projectManager->getProjectsByCategory('Design');
+} else {
+    $projects = $projectManager->getProjects();
+}
 
 
 
