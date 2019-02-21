@@ -63,15 +63,15 @@ class ProjectManager{
     }
 
 
-    public function getProjectsByCategory(Project $project)
+    public function getProjectsByCategory($project)
     {
-        $arrayOfProjects;
+        $arrayOfProjects = [];
         $query = $this->getDb()->prepare('SELECT * FROM projects WHERE category = :category');
-        $query->bindValue(':category', $project->getCategory(), PDO::PARAM_STR);
+        $query->bindValue(':category', $project, PDO::PARAM_STR);
         $query->execute();
         $projects = $query->fetchAll(PDO::FETCH_ASSOC);
         foreach ($projects as $project) {
-            $arrayOfProjects = new Project($project);
+            $arrayOfProjects[] = new Project($project);
         }
         return $arrayOfProjects;
     }
