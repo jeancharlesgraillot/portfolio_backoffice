@@ -66,7 +66,6 @@
 
   </div>
 
-
   <h2 id="projects" class="ml-3 my-5"><em>Projets</em></h2>
 
   <div class="col-12 mx-auto mt-4">
@@ -159,15 +158,15 @@
 
       <h3 class="ml-3 my-5 text-success">Mise à jour</h3>
 
-      <form class="ml-3" action="adminBack.php#projects" method="post" enctype="multipart/form-data">
+      <form class="ml-3" action="adminBack.php" method="post" enctype="multipart/form-data">
         <p class="">
-            <input class="" type="text" name="titleUpdate" placeholder="<?php $projectToUpdate->getTitle(); ?>" required>
+            <input class="" type="text" name="titleUpdate" placeholder="Titre" required>
         </p>
         <p class="">
-            <input class="" type="text" name="linkUpdate" placeholder="<?php $projectToUpdate->getLink(); ?>" required>
+            <input class="" type="text" name="linkUpdate" placeholder="Lien" required>
         </p>
         <p class="">
-          <textarea class="" name="descriptionUpdate" placeholder="<?php $projectToUpdate->getDescription(); ?>" cols="30" rows="5" required></textarea>
+          <textarea class="" name="descriptionUpdate" placeholder="Description" cols="30" rows="5" required></textarea>
         </p>
         <p class="">
           <select name="categoryUpdate" required>
@@ -180,7 +179,7 @@
             <input type="file" name="imageUpdate" id="image" required>
         </p>
         <p class="">
-            <input type="text" name="altUpdate" placeholder="<?php $projectToUpdate->getAlt(); ?>" required>
+            <input type="text" name="altUpdate" placeholder="Alt" required>
         </p>
         <p class="">
             <input class="" type="submit" name="updateProjectSend" value="Envoyer">

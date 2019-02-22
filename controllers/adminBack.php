@@ -83,11 +83,11 @@ if (isset($_POST['addProject']))
 //Update project
 if (isset($_POST['idProjectUpdate']) && isset($_POST['updateProject'])) 
 {   
-    $id = (int)$_POST['idProjectUpdate'];
-    echo 'test1';
-    
+    $id = intval($_POST['idProjectUpdate']);
+    var_dump($id);
+
     if (isset($_POST['updateProjectSend'])) 
-        {echo 'test2';
+    {echo 'test2';
         
         if (isset($_POST['titleUpdate']) && !empty($_POST['titleUpdate'])
         && isset($_POST['descriptionUpdate']) && !empty($_POST['descriptionUpdate'])
@@ -152,7 +152,7 @@ if (isset($_POST['idProjectDelete']) && isset($_POST['deleteProject']))
 // Get data in Db
 $users = $formManager->getUsers();
 $projects = $projectManager->getProjects();
-$projectToUpdate = $projectManager->getProjectById($id);
+// $projectToUpdate = $projectManager->getProjectById($_POST['idProjectUpdate']);
 
 include "../views/adminBackView.php";
 
