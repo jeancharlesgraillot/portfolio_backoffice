@@ -62,12 +62,23 @@ if (isset($_POST['contact']))
     
 }
 
+//Select projects with php form
+// if (!isset($_POST['category']))
+// {
+//     $projects = $projectManager->getProjects();
+    
+// }elseif (isset($_POST['category']) and $_POST['category'] == 'Development')
+// {
+//     $projects = $projectManager->getProjectsByCategory('Development');
+    
+// }elseif (isset($_POST['category']) and $_POST['category'] == 'Design')
+// {
+//     $projects = $projectManager->getProjectsByCategory('Design');
+// }
+
 
 $users = $formManager->getUsers();
 $projects = $projectManager->getProjects();
-
-
-
 
 require "../views/indexView.php";
  ?>

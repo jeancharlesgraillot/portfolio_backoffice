@@ -32,7 +32,7 @@ if (!isset($_SESSION['admin_name'])) {
 
 //Add project 
 
-if (isset($_POST['submit'])) 
+if (isset($_POST['addProject'])) 
 {
     if (isset($_POST['title']) && !empty($_POST['title'])
     && isset($_POST['description']) && !empty($_POST['description'])
@@ -80,6 +80,60 @@ if (isset($_POST['submit']))
 
 
 
+//Update project
+if (isset($_POST['idProjectUpdate']) && isset($_POST['updateProject'])) 
+{   
+    $id = (int)$_POST['idProjectUpdate'];
+    echo 'test1';
+    
+    if (isset($_POST['updateProjectSend'])) 
+        {echo 'test2';
+        
+        if (isset($_POST['titleUpdate']) && !empty($_POST['titleUpdate'])
+        && isset($_POST['descriptionUpdate']) && !empty($_POST['descriptionUpdate'])
+        && isset($_POST['linkUpdate']) && !empty($_POST['linkUpdate'])
+        && isset($_POST['categoryUpdate']) && !empty($_POST['categoryUpdate'])
+        && isset($_POST['altUpdate']) && !empty($_POST['altUpdate'])
+        && isset($_FILES['imageUpdate']) AND $_FILES['imageUpdate']['error'] == 0)
+        {echo 'test3';
+
+            $title = htmlspecialchars($_POST['titleUpdate']);
+            $description = htmlspecialchars($_POST['descriptionUpdate']);
+            $link = htmlspecialchars($_POST['linkUpdate']);
+            $category = htmlspecialchars($_POST['categoryUpdate']);
+            $alt = htmlspecialchars($_POST['altUpdate']);
+
+            // Testons si le fichier n'est pas trop gros
+            if ($_FILES['imageUpdate']['size'] <= 1000000)
+            {echo 'test4';
+                // Testons si l'extension est autorisée
+                $datafile = pathinfo($_FILES['imageUpdate']['name']);
+                $extension_upload = $datafile['extension'];
+                $allowed_extensions = array('jpg', 'jpeg', 'png');
+                if (in_array($extension_upload, $allowed_extensions))
+                {echo 'test5';
+                        // On peut valider le fichier et le stocker définitivement
+                        move_uploaded_file($_FILES['imageUpdate']['tmp_name'], '../assets/img/realisations/' . basename($_FILES['imageUpdate']['name']));
+
+                        $project = new Project([
+                            'id' => $id,
+                            'title' => $title,
+                            'description' => $description,
+                            'link' => $link,
+                            'category' => $category,
+                            'alt' => $alt,
+                            'image' => '../assets/img/realisations/' . basename($_FILES['imageUpdate']['name'])
+
+                        ]);
+                        
+                        $projectManager->updateProject($project);
+                        $message = "L'envoi a bien été effectué !";
+                }
+            }
+        }
+    }
+}
+
 // Delete contact
 if (isset($_POST['idContact']) && isset($_POST['deleteContact']))
 {
@@ -88,15 +142,17 @@ if (isset($_POST['idContact']) && isset($_POST['deleteContact']))
 }
 
 //Delete project
-if (isset($_POST['idProject']) && isset($_POST['deleteProject']))
+if (isset($_POST['idProjectDelete']) && isset($_POST['deleteProject']))
 {
-    $delete = intval($_POST['idProject']);        
+    $delete = intval($_POST['idProjectDelete']);        
     $projectManager->deleteProject($delete);
 }
+
 
 // Get data in Db
 $users = $formManager->getUsers();
 $projects = $projectManager->getProjects();
+$projectToUpdate = $projectManager->getProjectById($id);
 
 include "../views/adminBackView.php";
 
