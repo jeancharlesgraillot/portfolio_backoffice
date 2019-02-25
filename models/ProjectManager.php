@@ -126,13 +126,12 @@ class ProjectManager{
     public function updateProject(Project $project)
     {
         $query = $this->getDb()->prepare('UPDATE projects SET title = :title, description = :description, link = :link, image = :image, alt = :alt, category = :category WHERE id = :id');
-        $query->bindValue(':id', $project->getId(), PDO::PARAM_INT);
-        $query->bindValue(':title', $project->getTitle(), PDO::PARAM_STR);
-        $query->bindValue(':description', $project->getDescription(), PDO::PARAM_STR);
-        $query->bindValue(':link', $project->getLink(), PDO::PARAM_STR);
-        $query->bindValue(':image', $project->getImage(), PDO::PARAM_STR);
-        $query->bindValue(':alt', $project->getAlt(), PDO::PARAM_STR);
-        $query->bindValue(':category', $project->getCategory(), PDO::PARAM_STR);
+        $query->bindValue(':id', $id, PDO::PARAM_INT);
+        $query->bindValue(':title', $title, PDO::PARAM_STR);
+        $query->bindValue(':description', $description, PDO::PARAM_STR);
+        $query->bindValue(':link', $link, PDO::PARAM_STR);
+        $query->bindValue(':image', $image, PDO::PARAM_STR);
+        $query->bindValue(':alt', $alt, PDO::PARAM_STR);
         $query->execute();
     }
 

@@ -102,7 +102,7 @@
               </form>
             </td>
             <td>
-              <form class="update" action="adminBack.php#projects" method="post">
+              <form class="update" action="updateProject.php" method="post" target="_blank">
                 <input type="hidden" name="idProjectUpdate" value="<?php echo $project->getId(); ?>"  required>
                 <input type="submit" name="updateProject" value="Update">
               </form>
@@ -117,79 +117,38 @@
 
   </div>
 
-  <div class="row d-flex">
 
-    <div class="col-6">
+  <h3 class="ml-3 my-5 text-success">Ajout</h3>
 
-      <h3 class="ml-3 my-5 text-success">Ajout</h3>
+  <form class="ml-3" action="adminBack.php#projects" method="post" enctype="multipart/form-data">
+    <p class="">
+        <input class="" type="text" name="title" placeholder="Titre" required>
+    </p>
+    <p class="">
+        <input class="" type="text" name="link" placeholder="Lien" required>
+    </p>
+    <p class="">
+      <textarea class="" name="description" placeholder="Description" cols="30" rows="5" required></textarea>
+    </p>
+    <p class="">
+      <select name="category" required>
+        <option value="" disabled>Catégorie</option>
+        <option value="Development">Développement</option>
+        <option value="Design">Design</option>
+    </select>
+    </p>
+    <p class="">
+        <input type="file" name="image" id="image" required>
+    </p>
+    <p class="">
+        <input type="text" name="alt" placeholder="Alt" required>
+    </p>
+    <p class="">
+        <input class="" type="submit" name="addProject" value="Envoyer">
+    </p>
+  </form>
+  <p><?php echo $message ?></p>
 
-      <form class="ml-3" action="adminBack.php#projects" method="post" enctype="multipart/form-data">
-        <p class="">
-            <input class="" type="text" name="title" placeholder="Titre" required>
-        </p>
-        <p class="">
-            <input class="" type="text" name="link" placeholder="Lien" required>
-        </p>
-        <p class="">
-          <textarea class="" name="description" placeholder="Description" cols="30" rows="5" required></textarea>
-        </p>
-        <p class="">
-          <select name="category" required>
-            <option value="" disabled>Catégorie</option>
-            <option value="Development">Développement</option>
-            <option value="Design">Design</option>
-        </select>
-        </p>
-        <p class="">
-            <input type="file" name="image" id="image" required>
-        </p>
-        <p class="">
-            <input type="text" name="alt" placeholder="Alt" required>
-        </p>
-        <p class="">
-            <input class="" type="submit" name="addProject" value="Envoyer">
-        </p>
-      </form>
-      <p><?php echo $message ?></p>
-
-    </div>
-
-    <div class="col-6">
-
-      <h3 class="ml-3 my-5 text-success">Mise à jour</h3>
-
-      <form class="ml-3" action="adminBack.php" method="post" enctype="multipart/form-data">
-        <p class="">
-            <input class="" type="text" name="titleUpdate" placeholder="Titre" required>
-        </p>
-        <p class="">
-            <input class="" type="text" name="linkUpdate" placeholder="Lien" required>
-        </p>
-        <p class="">
-          <textarea class="" name="descriptionUpdate" placeholder="Description" cols="30" rows="5" required></textarea>
-        </p>
-        <p class="">
-          <select name="categoryUpdate" required>
-            <option value="" disabled>Catégorie</option>
-            <option value="Development">Développement</option>
-            <option value="Design">Design</option>
-        </select>
-        </p>
-        <p class="">
-            <input type="file" name="imageUpdate" id="image" required>
-        </p>
-        <p class="">
-            <input type="text" name="altUpdate" placeholder="Alt" required>
-        </p>
-        <p class="">
-            <input class="" type="submit" name="updateProjectSend" value="Envoyer">
-        </p>
-      </form>
-      <p><?php echo $message ?></p>
-      
-    </div>
-
-  </div>
 
   
 
