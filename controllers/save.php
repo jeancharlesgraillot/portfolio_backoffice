@@ -28,13 +28,12 @@ if (!isset($_SESSION['admin_name'])) {
     header('Location: index.php');
 }
 
-
-$id = intval($_GET['id']);
-
 //Update project
-if (isset($_GET['id']) && isset($_POST['updateProject'])) 
+if (isset($_GET['id'])) 
 {
     
+    $id = intval($_GET['id']);
+   
     if (isset($_POST['titleUpdate']) && !empty($_POST['titleUpdate'])
     && isset($_POST['descriptionUpdate']) && !empty($_POST['descriptionUpdate'])
     && isset($_POST['linkUpdate']) && !empty($_POST['linkUpdate'])
@@ -76,10 +75,13 @@ if (isset($_GET['id']) && isset($_POST['updateProject']))
 
                 ]);
 
-                $projectManager->updateProject($project);
-                $message = "L'envoi a bien été effectué !";
-                header('Location: adminBack.php');
+                if (isset($_POST['updateProjectSend'])) {
+                    
+                    $projectManager->updateProject($project);
+                    $message = "L'envoi a bien été effectué !";
+                    header('Location: adminBack.php');
 
+                }    
             }
         }
     }
@@ -89,7 +91,7 @@ if (isset($_GET['id']) && isset($_POST['updateProject']))
 // Get data in Db
 $users = $formManager->getUsers();
 $projects = $projectManager->getProjects();
-$projectToUpdate = $projectManager->getProjectById($id);
+$projectToUpdate = $projectManager->getProjectById($_GET['id']);
 
 include "../views/updateProjectView.php";
 

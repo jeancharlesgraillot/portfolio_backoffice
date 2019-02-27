@@ -102,8 +102,7 @@
               </form>
             </td>
             <td>
-              <form class="update" action="updateProject.php" method="post" target="_blank">
-                <input type="hidden" name="idProjectUpdate" value="<?php echo $project->getId(); ?>"  required>
+              <form class="update" action="updateProject.php?id=<?php echo $project->getId(); ?>" method="post">
                 <input type="submit" name="updateProject" value="Update">
               </form>
             </td>
